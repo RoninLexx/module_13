@@ -13,11 +13,8 @@ async def start_strongman(name, power):
 
 async def start_tournament():
     # Создаем задачи для соревнований
-    tasks = [
-        start_strongman('Pasha', 3),
-        start_strongman('Denis', 4),
-        start_strongman('Apollon', 5)
-    ]
+    tasks = [start_strongman('Pasha', 3), start_strongman('Denis', 4),
+             start_strongman('Apollon', 5)]
 
     # Ожидаем выполнения всех задач
     await asyncio.gather(*tasks)
